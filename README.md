@@ -56,4 +56,12 @@ Mansi Kapoor
 
 
 ## Author
-Manasi Kapoor
+Mansi Kapoor
+
+## Project Screenshots
+
+### Home Page
+![Home Page](screenshot1.png)
+
+### Resume Ranking Output
+![Output](screenshot2.png)
