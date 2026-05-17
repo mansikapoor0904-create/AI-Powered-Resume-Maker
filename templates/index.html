@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Resume Ranker</title>
+</head>
+
+<body>
+
+    <h1>AI-Powered Resume Ranker</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <label>Enter Job Description:</label>
+
+        <br><br>
+
+        <textarea
+            name="job_description"
+            rows="10"
+            cols="70">
+        </textarea>
+
+        <br><br>
+
+        <label>Upload Resumes (PDF)</label>
+
+        <input
+            type="file"
+            name="resumes"
+            multiple>
+
+        <br><br>
+
+        <button type="submit">
+            Rank Resumes
+        </button>
+
+    </form>
+
+    <hr>
+
+    {% if ranked_data %}
+
+        <h2>Resume Rankings</h2>
+
+        <table border="1" cellpadding="10">
+
+            <tr>
+                <th>Resume</th>
+                <th>Score</th>
+            </tr>
+
+            {% for item in ranked_data %}
+
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.score }}%</td>
+            </tr>
+
+            {% endfor %}
+
+        </table>
+
+    {% endif %}
+
+</body>
+</html>
